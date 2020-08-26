@@ -9,7 +9,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "FiraCode Nerd Font:style=Regular:size=10" };
 static const char dmenufont[]       = "FiraCode Nerd Font:style=Regular:size=10"; 
 static const char col_gray1[]       = "#2e3440";
-static const char col_gray2[]       = "#434c5e";
+static const char col_gray2[]       = "#3B4252";
 static const char col_gray3[]       = "#d8dee9";
 static const char col_gray4[]       = "#eceff4";
 static const char col_cyan[]        = "#5e81ac";
