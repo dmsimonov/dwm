@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
@@ -61,9 +62,15 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *upvol[] = { "amixer", "set", "Master", "2+", NULL };
+static const char *downvol[] = { "amixer", "set", "Master", "2-", NULL };
+static const char *mute[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = upvol } },
+        { 0,              XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
+        { 0,              XF86XK_AudioMute,        spawn,          {.v = mute } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
