@@ -62,9 +62,9 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
-static const char *upvol[] = { "amixer", "set", "Master", "2+", NULL };
-static const char *downvol[] = { "amixer", "set", "Master", "2-", NULL };
-static const char *mute[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
+static const char *upvol[] = { "amixer", "-q", "sset", "Master", "1%+", NULL };
+static const char *downvol[] = { "amixer", "-q", "sset", "Master", "1%-", NULL };
+static const char *mute[] = { "amixer", "-q", "sset", "Master", "toggle", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
