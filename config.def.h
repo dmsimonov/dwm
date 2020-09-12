@@ -21,7 +21,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "*", "*", "*", "*", "*", "*", "*", "*", "*" };
+static const char *tags[] = { "\uf444", "\uf444", "\uf444", "\uf444", "\uf444", "\uf444", "\uf444", "\uf444", "\uf444" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -46,7 +46,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
